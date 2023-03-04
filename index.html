@@ -5,11 +5,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/3efaa72efd.js" crossorigin="anonymous"></script>
+  <title>CAT'S</title>
+  <script defer src="js/api.js"></script>
+  <script defer src="js/index.js"></script>
 </head>
 
 <body>
 
+  <header class="header">
+    <a class="logo" href="#"><i class="fas fa-light fa-cat"></i></a>
+    <h1 class="header-title">CATS</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="button">
+        <button data-add_button type="button" class="main-button">ADD A NEW CAT
+        </button>
+      </div>
+
+      <div data-modal-add class="modal-add hidden">
+        <div class="custom-modal">
+          <i data-cross-delete class="cross fas fa-sharp fa-solid fa-xmark"></i>
+
+          <form name="add_cats_form" class="add_cats_form">
+            <div class="add-form__element">
+              <input name='id' type="number" class="form-control" placeholder="id">
+            </div>
+
+            <div class="add-form__element">
+              <input name='name' type="text" class="form-control" placeholder="name">
+            </div>
+
+            <div class="add-form__element">
+              <input name='rate' type="number" class="form-control" placeholder="rate">
+            </div>
+
+            <div class="add-form__element">
+              <input name='age' type="number" class="form-control" placeholder="age">
+            </div>
+
+            <div class="add-form__element">
+              <input name='description' type="text" class="form-control" placeholder="description">
+            </div>
+
+            <div class="add-form__element">
+              <input name='image' type="text" class="form-control" placeholder="image">
+            </div>
+
+            <div class="add-form__element form-check">
+              <label class="form-check-label" for="exampleCheck1">favorite?</label>
+              <input name='favorite' type="checkbox" class="form-check-input" id="exampleCheck1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p class="error-msg-form" data-errmsg></p>
+          </form>
+        </div>
+      </div>
+
+
+      <div data-modal-open class="modal-open hidden">
+        <div class="custom-modal-open ">
+          <i data-cross-open class="cross fas fa-sharp fa-solid fa-xmark"></i>
+          <div data-open-card class="open-card-info">
+          </div>
+        </div>
+      </div>
+
+
+      <div data-wrapper>
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer-text">Ovchinnikov Vyacheslav</p>
+  </footer>
 </body>
 
 </html>
